@@ -4,11 +4,23 @@ import styled from "styled-components";
 const Container = styled.div`
   min-height: 300px;
   min-width: 300px;
-  width: 75%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 425px) {
+    width: 95%;
+  }
+
+  @media only screen and (min-width: 425px) {
+    width: 75%;
+  }
+
+  @media only screen and (min-width: 1098px) {
+    width: 60%;
+  }
 `;
 
 const Image = styled.img`

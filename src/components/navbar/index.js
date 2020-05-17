@@ -14,7 +14,7 @@ const Logo = styled.span`
   font-size: 32px;
   color: #5d5b6a;
   font-weight: bold;
-  font-family: "Indie Flower", cursive;
+  font-family: "Amatic SC", cursive;
 `;
 
 const Header = () => {

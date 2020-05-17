@@ -25,8 +25,9 @@ const Image = styled.img`
 
 const Title = styled.h2`
   margin: 0;
-  font-size: 16px;
+  font-size: 19px;
   color: #5d5b6a;
+  font-family: "Amatic SC", cursive;
 `;
 const Category = styled.h3`
   margin: 0;

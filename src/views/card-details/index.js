@@ -15,6 +15,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: start;
   background-color: #ecf2f9;
+  padding-x: 10%;
 `;
 
 const CardDetails = () => {

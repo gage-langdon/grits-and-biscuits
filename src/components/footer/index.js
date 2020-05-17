@@ -14,7 +14,7 @@ const Credits = styled.div`
   margin-left: auto;
   padding-right: 16px;
   color: #5d5b6a;
-  font-family: "Indie Flower", cursive;
+  font-family: "Amatic SC", cursive;
 `;
 
 const Footer = () => {
