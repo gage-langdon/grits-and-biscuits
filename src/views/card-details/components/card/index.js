@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { space } from "styled-system";
 import ShareModal from "../share-modal";
 
@@ -54,10 +53,6 @@ const CardNavBtn = styled.button`
   cursor: pointer;
 
   ${space}
-`;
-
-const BreadCrumb = styled.div`
-  // margin-right: auto;
 `;
 
 const Card = ({ id, frontSrc, insideSrc, category }) => {
