@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
+import LLamaSeeThatAss from "../../cards/llama_see_that_ass";
 
 // Components
 import Cards from "../../cards";
@@ -51,7 +53,24 @@ const CardListing = () => {
   }, []);
   if (remainder) createCardRow(remainder);
 
-  return <Container>{CardRows}</Container>;
+  return (
+    <>
+      <Helmet>
+        <title>Grits and Biscuits</title>
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:title" content="Grits and Biscuits" />
+        <meta
+          property="og:description"
+          content="Hand drawn, interactive, cards by Kaylin 💕"
+        />
+        <meta
+          property="og:image"
+          content={`https://${window.location.hostname}${LLamaSeeThatAss.front}`}
+        />
+      </Helmet>
+      <Container>{CardRows}</Container>
+    </>
+  );
 };
 
 export default CardListing;

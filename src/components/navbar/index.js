@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <Nav>
       <NavLink to="/">
-        <Logo>Kaylin's Cards</Logo>
+        <Logo>Grits and Biscuits</Logo>
       </NavLink>
     </Nav>
   );
