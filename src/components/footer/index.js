@@ -5,7 +5,7 @@ const Container = styled.footer`
   padding-top: 60px;
   width: 100%;
   padding-bottom: 16px;
-  background-color: #ecf2f9;
+  background-color: #bbded6;
   display: flex;
   display-direction: row;
 `;

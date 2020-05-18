@@ -19,6 +19,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: start;
   background-color: #ecf2f9;
+  padding-bottom: 60px;
 `;
 
 const Row = styled.div`

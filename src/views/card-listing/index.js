@@ -35,12 +35,12 @@ const SectionContainer = styled.div`
       linear-gradient(225deg, #ecf2f9 21px, #fab7b7 22px, #fab7b7 24px, transparent 24px, transparent 67px, #fab7b7 67px, #fab7b7 69px, transparent 69px)0 64px;
       background-color:#ecf2f9;
       background-size: 64px 128px;
-`}
+  `}
 
   ${({ background }) =>
     background === "squiggles" &&
     `
-      background-color: #fab7b747;
+      background-color: #fae3d9;
       background-size: 58px 58px;
       background-position: 0px 2px, 4px 35px, 29px 31px, 33px 6px,
       0px 36px, 4px 2px, 29px 6px, 33px 30px;
@@ -54,7 +54,14 @@ const SectionContainer = styled.div`
       linear-gradient(155deg,  #ecf2f9 10px, transparent 10px),
       linear-gradient(335deg,  #ecf2f9 10px, transparent 10px),
       linear-gradient(155deg,  #ecf2f9 10px, transparent 10px);
-`}
+    `}
+
+
+    ${({ background }) =>
+      background === "solid" &&
+      `
+        background-color: #bbded6;
+    `}
 `;
 
 const Row = styled.div`
@@ -106,7 +113,7 @@ const CardListing = () => {
           {section.linkedCategory ? (
             <CategoryLink>
               <Link to={`/categories/${section.linkedCategory}`}>
-                View More
+                View More {section.linkedCategory}
               </Link>
             </CategoryLink>
           ) : null}
