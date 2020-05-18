@@ -45,6 +45,7 @@ const listSections = () => {
     },
 
     {
+      title: "Just Because",
       items: [alwaysChooseHappiness, usFriendsStickTogether, youQuackMeUp],
       linkedCategory: "just because",
     },
