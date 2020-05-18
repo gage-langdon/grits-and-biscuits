@@ -8,6 +8,7 @@ import Footer from "../components/footer";
 // views
 import CardListing from "./card-listing";
 import CardDetails from "./card-details";
+import CategoryDetails from "./category-details";
 
 const Container = styled.div`
   height: 100%;
@@ -26,6 +27,11 @@ const Views = () => {
     <Container>
       <Navbar />
       <Switch>
+        <Route
+          path="/categories/:category"
+          children={<CategoryDetails />}
+          exact
+        />
         <Route path="/:id" children={<CardDetails />} exact />
         <Route path="/" children={<CardListing />} />
       </Switch>

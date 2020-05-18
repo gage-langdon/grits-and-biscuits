@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 import LLamaSeeThatAss from "../../cards/llama_see_that_ass";
 
 // Components
 import Cards from "../../cards";
-import PreviewCard from "./components/preview-card";
+import PreviewCard from "../../components/preview-card";
 
 const Container = styled.div`
   padding-top: 24px;
@@ -67,8 +68,23 @@ const SectionTitle = styled.h2`
   color: #5d5b6a;
 `;
 
+const SectionFooter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+`;
+
+const CategoryLink = styled.span`
+  color: black;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+`;
+
 const CardListing = () => {
-  const sections = Cards.list();
+  const sections = Cards.listSections();
 
   const CardRows = sections.map((section, i) => {
     const cardPreviews = section.items.map((card) => (
@@ -84,6 +100,15 @@ const CardListing = () => {
       <SectionContainer key={`section_${i}`} background={section.background}>
         <SectionTitle>{section.title}</SectionTitle>
         <Row>{cardPreviews}</Row>
+        <SectionFooter>
+          {section.linkedCategory ? (
+            <CategoryLink>
+              <Link to={`/categories/${section.linkedCategory}`}>
+                View More
+              </Link>
+            </CategoryLink>
+          ) : null}
+        </SectionFooter>
       </SectionContainer>
     );
   });

@@ -22,7 +22,9 @@ const allCards = [
   sallie,
 ];
 
-const list = () => {
+const list = () => allCards;
+
+const listSections = () => {
   return [
     {
       title: "Featured",
@@ -37,6 +39,7 @@ const list = () => {
       title: "Graduation",
       background: "squiggles",
       items: [llamaJustSayCongrats, ohThePlacesYoullGo, youOffishallyDidIt],
+      linkedCategory: "graduation",
     },
     {
       title: "Make a friend",
@@ -49,5 +52,6 @@ const getById = (cardId) => allCards.find(({ id }) => id === cardId);
 
 export default {
   list,
+  listSections,
   getById,
 };

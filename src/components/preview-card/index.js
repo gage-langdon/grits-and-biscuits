@@ -29,13 +29,8 @@ const Title = styled.h2`
   color: #5d5b6a;
   font-family: "Amatic SC", cursive;
 `;
-const Category = styled.h3`
-  margin: 0;
-  color: #5d5b6a;
-  font-size: 12px;
-`;
 
-const CardPreview = ({ imageSrc, id, title, category }) => {
+const CardPreview = ({ imageSrc, id, title }) => {
   return (
     <Link to={`/${id}`}>
       <Container>
@@ -43,7 +38,6 @@ const CardPreview = ({ imageSrc, id, title, category }) => {
       </Container>
       <Meta>
         <Title>{title}</Title>
-        <Category>{category}</Category>
       </Meta>
     </Link>
   );

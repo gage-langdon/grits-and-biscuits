@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { space } from "styled-system";
-
 import ShareModal from "../share-modal";
 
 const Container = styled.div`
@@ -36,6 +36,7 @@ const Image = styled.img`
 const CardNav = styled.div`
   width: inherit;
   margin-top: 32px;
+  margin-bottom: 32px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -55,7 +56,11 @@ const CardNavBtn = styled.button`
   ${space}
 `;
 
-const Card = ({ id, frontSrc, insideSrc }) => {
+const BreadCrumb = styled.div`
+  // margin-right: auto;
+`;
+
+const Card = ({ id, frontSrc, insideSrc, category }) => {
   const [isFlipped, setFlipped] = useState(false);
   const [isShareModalActive, setShareModalActive] = useState(false);
 

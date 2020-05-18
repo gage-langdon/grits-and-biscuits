@@ -47,7 +47,12 @@ const CardDetails = () => {
         />
       </Helmet>
       <Container>
-        <Card id={id} frontSrc={card.front} insideSrc={card.inside} />
+        <Card
+          id={id}
+          frontSrc={card.front}
+          insideSrc={card.inside}
+          category={card.category}
+        />
       </Container>
     </>
   );
