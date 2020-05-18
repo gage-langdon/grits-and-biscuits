@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -30,9 +30,15 @@ const Title = styled.h2`
   font-family: "Amatic SC", cursive;
 `;
 
-const CardPreview = ({ imageSrc, id, title }) => {
+const CardPreview = ({ frontSrc, insideSrc, id, title }) => {
+  const [isFlipped, setFlipped] = useState(false);
+
+  const imageSrc = isFlipped ? insideSrc : frontSrc;
+
+  const toggleFlip = () => insideSrc && setFlipped(!isFlipped);
+
   return (
-    <Link to={`/${id}`}>
+    <Link to={`/${id}`} onMouseEnter={toggleFlip} on onMouseLeave={toggleFlip}>
       <Container>
         <Image src={imageSrc} />
       </Container>

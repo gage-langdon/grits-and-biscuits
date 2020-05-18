@@ -101,7 +101,8 @@ const CardListing = () => {
       <PreviewCard
         key={card.id}
         id={card.id}
-        imageSrc={card.front}
+        frontSrc={card.front}
+        insideSrc={card.inside}
         title={card.title}
         category={card.category}
       />
