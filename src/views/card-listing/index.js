@@ -87,7 +87,8 @@ const SectionFooter = styled.div`
 const CategoryLink = styled.span`
   color: black;
   a {
-    color: black;
+    color: #15d7aa;
+    font-weight: bold;
     text-decoration: none;
   }
 `;
@@ -113,7 +114,7 @@ const CardListing = () => {
           {section.linkedCategory ? (
             <CategoryLink>
               <Link to={`/categories/${section.linkedCategory}`}>
-                View more {section.linkedCategory}
+                View more {section.linkedCategory} cards
               </Link>
             </CategoryLink>
           ) : null}

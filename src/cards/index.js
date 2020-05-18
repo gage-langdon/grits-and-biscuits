@@ -11,6 +11,9 @@ import sallie from "./sallie";
 import yahDone from "./yah-done";
 import iRuffYouThisMuch from "./i-ruff-you-this-much";
 import llamaSayYouTheBest from "./llama-say-you-the-best";
+import alwaysChooseHappiness from "./always-choose-happiness";
+import partyAndPartyAndYeah from "./party-and-party-and-yeah";
+import youQuackMeUp from "./you-quack-me-up";
 
 const allCards = [
   llamaseethatass,
@@ -26,6 +29,9 @@ const allCards = [
   yahDone,
   llamaSayYouTheBest,
   iRuffYouThisMuch,
+  alwaysChooseHappiness,
+  partyAndPartyAndYeah,
+  youQuackMeUp,
 ];
 
 const list = () => allCards;
@@ -39,7 +45,8 @@ const listSections = () => {
     },
 
     {
-      items: [happyBirthdayLlama, usFriendsStickTogether, llamaSayYouTheBest],
+      items: [alwaysChooseHappiness, usFriendsStickTogether, youQuackMeUp],
+      linkedCategory: "just because",
     },
     {
       title: "Graduation",
@@ -52,6 +59,11 @@ const listSections = () => {
       title: "Love",
       items: [youGotAPizzaMyHeart, llamaseethatass, iRuffYouThisMuch],
       linkedCategory: "love",
+    },
+    {
+      title: "Birthday",
+      items: [happyBirthdayLlama, partyAndPartyAndYeah],
+      linkedCategory: "birthday",
     },
     {
       title: "Make a friend",
