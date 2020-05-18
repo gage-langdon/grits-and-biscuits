@@ -113,7 +113,7 @@ const CardListing = () => {
           {section.linkedCategory ? (
             <CategoryLink>
               <Link to={`/categories/${section.linkedCategory}`}>
-                View More {section.linkedCategory}
+                View more {section.linkedCategory}
               </Link>
             </CategoryLink>
           ) : null}
