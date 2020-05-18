@@ -14,6 +14,7 @@ import llamaSayYouTheBest from "./llama-say-you-the-best";
 import alwaysChooseHappiness from "./always-choose-happiness";
 import partyAndPartyAndYeah from "./party-and-party-and-yeah";
 import youQuackMeUp from "./you-quack-me-up";
+import youAreLikeWine from "./you-are-like-wine";
 
 const allCards = [
   llamaseethatass,
@@ -32,6 +33,7 @@ const allCards = [
   alwaysChooseHappiness,
   partyAndPartyAndYeah,
   youQuackMeUp,
+  youAreLikeWine,
 ];
 
 const list = () => allCards;
@@ -63,7 +65,7 @@ const listSections = () => {
     },
     {
       title: "Birthday",
-      items: [happyBirthdayLlama, partyAndPartyAndYeah],
+      items: [happyBirthdayLlama, partyAndPartyAndYeah, youAreLikeWine],
       linkedCategory: "birthday",
     },
     {

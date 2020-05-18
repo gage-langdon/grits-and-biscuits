@@ -49,7 +49,8 @@ const CategoryDetails = () => {
     );
 
   const CardRows = [];
-  const createCardRow = (cardArr) => CardRows.push(<Row>{cardArr}</Row>);
+  const createCardRow = (cardArr) =>
+    CardRows.push(<Row key={`category_row_${CardRows.length}`}>{cardArr}</Row>);
 
   const remainder = cards.reduce((acc, card) => {
     // groups of 3
