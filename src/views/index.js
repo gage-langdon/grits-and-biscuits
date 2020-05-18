@@ -21,6 +21,7 @@ const Views = () => {
   // Scroll to top on route change
   useEffect(() => {
     window.scrollTo({ top: 0 });
+    window.ga("send", "pageview", pathname);
   }, [pathname]);
 
   return (
