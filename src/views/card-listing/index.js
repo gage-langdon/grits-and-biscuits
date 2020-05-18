@@ -91,7 +91,7 @@ const CardListing = () => {
   return (
     <>
       <Helmet>
-        <title>Grits and Biscuits</title>
+        <title>Cards by Kaylin 💕</title>
         <meta property="og:url" content={window.location.href} />
         <meta property="og:title" content="Grits and Biscuits" />
         <meta
