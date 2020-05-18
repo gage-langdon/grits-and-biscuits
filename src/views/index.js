@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import ReactGA from "react-ga";
 
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
@@ -21,8 +22,7 @@ const Views = () => {
   // Scroll to top on route change
   useEffect(() => {
     window.scrollTo({ top: 0 });
-
-    if (window.ga) window.ga("send", "pageview", pathname);
+    ReactGA.pageview(pathname);
   }, [pathname]);
 
   return (
