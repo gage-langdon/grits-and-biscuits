@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { space } from "styled-system";
 
 import ShareModal from "../share-modal";
 
@@ -48,6 +49,7 @@ const CardNavBtn = styled.button`
   color: ${({ active }) => (active ? "#5d5b6a" : "#588da8")};
   border: none;
   background: none;
+  ${space}
 `;
 
 const Card = ({ id, frontSrc, insideSrc }) => {
@@ -77,7 +79,9 @@ const Card = ({ id, frontSrc, insideSrc }) => {
         <Image src={imageSrc} onClick={toggleFlip} />
         <CardNav>
           {CardNavigation}
-          <CardNavBtn onClick={toggleShareMoeal}>Share</CardNavBtn>
+          <CardNavBtn ml="auto" onClick={toggleShareMoeal}>
+            Share
+          </CardNavBtn>
         </CardNav>
       </Container>
       <ShareModal active={isShareModalActive} onClose={toggleShareMoeal} />
