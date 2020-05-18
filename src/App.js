@@ -6,7 +6,7 @@ import Views from "./views";
 
 function App() {
   return (
-    <div style={{ height: "100%", width: "100%" }}>
+    <div style={{ height: "100%", width: "100%", overflow: "hidden" }}>
       <Router>
         <Views />
       </Router>

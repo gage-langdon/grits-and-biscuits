@@ -18,6 +18,46 @@ const Container = styled.div`
   background-color: #ecf2f9;
 `;
 
+const SectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ${({ background }) =>
+    background === "brick" &&
+    `
+      background: linear-gradient(135deg, #ecf2f9 21px, #fab7b7 22px, #fab7b7 24px, transparent 24px, transparent 67px, #fab7b7 67px, #fab7b7 69px, transparent 69px),
+      linear-gradient(225deg, #ecf2f9 21px, #fab7b7 22px, #fab7b7 24px, transparent 24px, transparent 67px, #fab7b7 67px, #fab7b7 69px, transparent 69px)0 64px;
+      background-color:#ecf2f9;
+      background-size: 64px 128px;
+
+      width: 100%;
+      padding: 60px;
+`}
+
+  ${({ background }) =>
+    background === "squiggles" &&
+    `
+      background-color: #fab7b747;
+      background-size: 58px 58px;
+      background-position: 0px 2px, 4px 35px, 29px 31px, 33px 6px,
+      0px 36px, 4px 2px, 29px 6px, 33px 30px;
+      background-image:
+      linear-gradient(335deg,  #ecf2f9 23px, transparent 23px),
+      linear-gradient(155deg,  #ecf2f9 23px, transparent 23px),
+      linear-gradient(335deg,  #ecf2f9 23px, transparent 23px),
+      linear-gradient(155deg,  #ecf2f9 23px, transparent 23px),
+
+      linear-gradient(335deg,  #ecf2f9 10px, transparent 10px),
+      linear-gradient(155deg,  #ecf2f9 10px, transparent 10px),
+      linear-gradient(335deg,  #ecf2f9 10px, transparent 10px),
+      linear-gradient(155deg,  #ecf2f9 10px, transparent 10px);
+
+      width: 100%;
+      padding: 60px;
+`}
+`;
+
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -26,32 +66,31 @@ const Row = styled.div`
   justify-content: center;
 `;
 
+const SectionTitle = styled.h2`
+  font-family: "Abril Fatface", cursive;
+  color: #5d5b6a;
+`;
+
 const CardListing = () => {
-  const cards = Cards.list();
+  const sections = Cards.list();
 
-  const CardRows = [];
-  const createCardRow = (cardArr) => CardRows.push(<Row>{cardArr}</Row>);
-
-  const remainder = cards.reduce((acc, card) => {
-    // groups of 3
-    if (acc.length === 3) {
-      createCardRow(acc);
-      acc = [];
-    }
-
-    // create card
-    return [
-      ...acc,
+  const CardRows = sections.map((section, i) => {
+    const cardPreviews = section.items.map((card) => (
       <PreviewCard
         key={card.id}
         id={card.id}
         imageSrc={card.front}
         title={card.title}
         category={card.category}
-      />,
-    ];
-  }, []);
-  if (remainder) createCardRow(remainder);
+      />
+    ));
+    return (
+      <SectionContainer key={`section_${i}`} background={section.background}>
+        <SectionTitle>{section.title}</SectionTitle>
+        <Row>{cardPreviews}</Row>
+      </SectionContainer>
+    );
+  });
 
   return (
     <>

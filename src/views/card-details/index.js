@@ -31,7 +31,6 @@ const CardDetails = () => {
       </Container>
     );
 
-  console.log(card);
   return (
     <>
       <Helmet>

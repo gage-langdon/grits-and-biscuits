@@ -7,20 +7,38 @@ import ohThePlacesYoullGo from "./oh-the-places-youll-go";
 import usFriendsStickTogether from "./us-friends-stick-together";
 import youGotAPizzaMyHeart from "./you-got-a-pizza-my-heart";
 
+const allCards = [
+  llamaseethatass,
+  whaleyougraduated,
+  youOffishallyDidIt,
+  happyBirthdayLlama,
+  llamaJustSayCongrats,
+  ohThePlacesYoullGo,
+  usFriendsStickTogether,
+  youGotAPizzaMyHeart,
+];
+
 const list = () => {
   return [
-    llamaseethatass,
-    whaleyougraduated,
-    youOffishallyDidIt,
-    happyBirthdayLlama,
-    llamaJustSayCongrats,
-    ohThePlacesYoullGo,
-    usFriendsStickTogether,
-    youGotAPizzaMyHeart,
+    {
+      title: "Featured",
+      items: [llamaseethatass, whaleyougraduated, youGotAPizzaMyHeart],
+      background: "brick",
+    },
+    // {
+    //   title: "Make a friend",
+    //   items: [],
+    // },
+    {
+      items: [happyBirthdayLlama, llamaJustSayCongrats, ohThePlacesYoullGo],
+    },
+    {
+      items: [usFriendsStickTogether, youOffishallyDidIt],
+    },
   ];
 };
 
-const getById = (cardId) => list().find(({ id }) => id === cardId);
+const getById = (cardId) => allCards.find(({ id }) => id === cardId);
 
 export default {
   list,
