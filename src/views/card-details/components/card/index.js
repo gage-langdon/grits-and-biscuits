@@ -25,7 +25,7 @@ const Container = styled.div`
   }
 `;
 
-const Image = styled.img`
+const ImageContainer = styled.img`
   height: inherit;
   width: inherit;
   border-radius: 7px;
@@ -64,6 +64,9 @@ const Card = ({ id, frontSrc, insideSrc, category }) => {
 
   const imageSrc = isFlipped ? insideSrc : frontSrc;
 
+  // precache inside card it loads immediately
+  if (insideSrc) new Image().src = insideSrc;
+
   const CardNavigation = insideSrc ? (
     <div>
       <CardNavBtn active={!isFlipped} onClick={toggleFlip}>
@@ -79,7 +82,7 @@ const Card = ({ id, frontSrc, insideSrc, category }) => {
   return (
     <>
       <Container>
-        <Image src={imageSrc} onClick={toggleFlip} />
+        <ImageContainer src={imageSrc} onClick={toggleFlip} />
         <CardNav>
           {CardNavigation}
           <CardNavBtn ml="auto" onClick={toggleShareMoeal}>
