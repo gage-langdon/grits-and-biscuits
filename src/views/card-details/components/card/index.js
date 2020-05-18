@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+import ShareModal from "../share-modal";
+
 const Container = styled.div`
   min-height: 300px;
   min-width: 300px;
@@ -30,7 +32,12 @@ const Image = styled.img`
 `;
 
 const CardNav = styled.div`
+  width: inherit;
   margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const CardNavDivider = styled.span`
@@ -43,25 +50,38 @@ const CardNavBtn = styled.button`
   background: none;
 `;
 
-const Card = ({ frontSrc, insideSrc }) => {
+const Card = ({ id, frontSrc, insideSrc }) => {
   const [isFlipped, setFlipped] = useState(false);
+  const [isShareModalActive, setShareModalActive] = useState(false);
 
-  const toggleFlip = () => setFlipped(!isFlipped);
+  const toggleFlip = () => insideSrc && setFlipped(!isFlipped);
+  const toggleShareMoeal = () => setShareModalActive(!isShareModalActive);
 
   const imageSrc = isFlipped ? insideSrc : frontSrc;
+
+  const CardNavigation = insideSrc ? (
+    <div>
+      <CardNavBtn active={!isFlipped} onClick={toggleFlip}>
+        Front
+      </CardNavBtn>
+      <CardNavDivider>|</CardNavDivider>
+      <CardNavBtn active={isFlipped} onClick={toggleFlip}>
+        Inside
+      </CardNavBtn>
+    </div>
+  ) : null;
+
   return (
-    <Container>
-      <Image src={imageSrc} onClick={toggleFlip} />
-      <CardNav>
-        <CardNavBtn active={!isFlipped} onClick={toggleFlip}>
-          Front
-        </CardNavBtn>
-        <CardNavDivider>|</CardNavDivider>
-        <CardNavBtn active={isFlipped} onClick={toggleFlip}>
-          Inside
-        </CardNavBtn>
-      </CardNav>
-    </Container>
+    <>
+      <Container>
+        <Image src={imageSrc} onClick={toggleFlip} />
+        <CardNav>
+          {CardNavigation}
+          <CardNavBtn onClick={toggleShareMoeal}>Share</CardNavBtn>
+        </CardNav>
+      </Container>
+      <ShareModal active={isShareModalActive} onClose={toggleShareMoeal} />
+    </>
   );
 };
 

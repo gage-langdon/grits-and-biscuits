@@ -32,7 +32,7 @@ const CardDetails = () => {
 
   return (
     <Container>
-      <Card frontSrc={card.front} insideSrc={card.inside} />
+      <Card id={id} frontSrc={card.front} insideSrc={card.inside} />
     </Container>
   );
 };
