@@ -30,6 +30,7 @@ const Image = styled.img`
   height: inherit;
   width: inherit;
   border-radius: 7px;
+  cursor: pointer;
 `;
 
 const CardNav = styled.div`
@@ -49,6 +50,8 @@ const CardNavBtn = styled.button`
   color: ${({ active }) => (active ? "#5d5b6a" : "#588da8")};
   border: none;
   background: none;
+  cursor: pointer;
+
   ${space}
 `;
 

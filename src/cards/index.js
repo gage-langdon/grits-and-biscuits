@@ -6,6 +6,8 @@ import llamaJustSayCongrats from "./llama-just-say-congrats";
 import ohThePlacesYoullGo from "./oh-the-places-youll-go";
 import usFriendsStickTogether from "./us-friends-stick-together";
 import youGotAPizzaMyHeart from "./you-got-a-pizza-my-heart";
+import timmy from "./timmy";
+import sallie from "./sallie";
 
 const allCards = [
   llamaseethatass,
@@ -16,6 +18,8 @@ const allCards = [
   ohThePlacesYoullGo,
   usFriendsStickTogether,
   youGotAPizzaMyHeart,
+  timmy,
+  sallie,
 ];
 
 const list = () => {
@@ -25,15 +29,18 @@ const list = () => {
       items: [llamaseethatass, whaleyougraduated, youGotAPizzaMyHeart],
       background: "brick",
     },
-    // {
-    //   title: "Make a friend",
-    //   items: [],
-    // },
+
     {
-      items: [happyBirthdayLlama, llamaJustSayCongrats, ohThePlacesYoullGo],
+      items: [happyBirthdayLlama, usFriendsStickTogether],
     },
     {
-      items: [usFriendsStickTogether, youOffishallyDidIt],
+      title: "Graduation",
+      background: "squiggles",
+      items: [llamaJustSayCongrats, ohThePlacesYoullGo, youOffishallyDidIt],
+    },
+    {
+      title: "Make a friend",
+      items: [sallie, timmy],
     },
   ];
 };

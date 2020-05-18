@@ -22,6 +22,8 @@ const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding: 60px;
 
   ${({ background }) =>
     background === "brick" &&
@@ -30,9 +32,6 @@ const SectionContainer = styled.div`
       linear-gradient(225deg, #ecf2f9 21px, #fab7b7 22px, #fab7b7 24px, transparent 24px, transparent 67px, #fab7b7 67px, #fab7b7 69px, transparent 69px)0 64px;
       background-color:#ecf2f9;
       background-size: 64px 128px;
-
-      width: 100%;
-      padding: 60px;
 `}
 
   ${({ background }) =>
@@ -52,9 +51,6 @@ const SectionContainer = styled.div`
       linear-gradient(155deg,  #ecf2f9 10px, transparent 10px),
       linear-gradient(335deg,  #ecf2f9 10px, transparent 10px),
       linear-gradient(155deg,  #ecf2f9 10px, transparent 10px);
-
-      width: 100%;
-      padding: 60px;
 `}
 `;
 

@@ -6,7 +6,7 @@ const Background = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 124%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 `;
@@ -54,6 +54,7 @@ const Header = styled.div`
 const CloseButton = styled.span`
   margin-left: auto;
   font-size: 32px;
+  cursor: pointer;
 `;
 
 const ShareTitle = styled.h4`
