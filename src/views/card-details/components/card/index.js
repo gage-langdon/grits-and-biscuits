@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 import ShareModal from "../share-modal";
+import { Link } from "react-router-dom";
+import { capitalize } from "../../../../utils";
 
 const Container = styled.div`
   min-height: 300px;
@@ -84,6 +86,12 @@ const Card = ({ id, frontSrc, insideSrc, category }) => {
       <Container>
         <ImageContainer src={imageSrc} onClick={toggleFlip} />
         <CardNav>
+          <Link to={`/categories/${category}`} style={{ marginRight: "auto" }}>
+            <CardNavBtn>
+              {"< "}
+              {capitalize(category)}
+            </CardNavBtn>
+          </Link>
           {CardNavigation}
           <CardNavBtn ml="auto" onClick={toggleShareMoeal}>
             Share

@@ -41,32 +41,32 @@ const list = () => allCards;
 const listSections = () => {
   return [
     {
-      title: "Featured",
+      title: "Featured Cards",
       items: [llamaseethatass, whaleyougraduated, youGotAPizzaMyHeart],
       background: "brick",
     },
-
     {
-      title: "Just Because",
-      items: [alwaysChooseHappiness, usFriendsStickTogether, youQuackMeUp],
-      linkedCategory: "just because",
+      title: "Birthday Cards",
+      items: [happyBirthdayLlama, partyAndPartyAndYeah, youAreLikeWine],
+      linkedCategory: "birthday",
     },
     {
-      title: "Graduation",
+      title: "Graduation Cards",
       background: "squiggles",
       items: [yahDone, ohThePlacesYoullGo, youOffishallyDidIt],
       linkedCategory: "graduation",
     },
 
     {
-      title: "Love",
+      title: "Love Cards",
       items: [youGotAPizzaMyHeart, llamaseethatass, iRuffYouThisMuch],
       linkedCategory: "love",
     },
+
     {
-      title: "Birthday",
-      items: [happyBirthdayLlama, partyAndPartyAndYeah, youAreLikeWine],
-      linkedCategory: "birthday",
+      title: "Just Because Cards",
+      items: [alwaysChooseHappiness, usFriendsStickTogether, youQuackMeUp],
+      linkedCategory: "just because",
     },
     {
       title: "Make a friend",

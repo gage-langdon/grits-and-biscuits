@@ -90,7 +90,7 @@ const CategoryDetails = () => {
         />
       </Helmet>
       <Container>
-        <SectionTitle>{capitalize(category)}</SectionTitle>
+        <SectionTitle>{capitalize(category)} Cards</SectionTitle>
         {CardRows}
       </Container>
     </>
