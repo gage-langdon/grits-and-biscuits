@@ -128,11 +128,9 @@ const CardListing = () => {
     <>
       <Helmet>
         <title>Cards by Kaylin 💕</title>
-        <meta property="og:url" content={window.location.href} />
-        <meta property="og:title" content="Grits and Biscuits" />
         <meta
           property="og:description"
-          content="Hand drawn, interactive, cards by Kaylin 💕"
+          content="Hand drawn, interactive, cards"
         />
         <meta
           property="og:image"
