@@ -35,6 +35,17 @@ const SectionTitle = styled.h2`
   color: #5d5b6a;
 `;
 
+const Footer = styled.div`
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  a {
+    color: #15d7aa;
+    font-weight: bold;
+    text-decoration: none;
+  }
+`;
+
 const CategoryDetails = () => {
   const { category } = useParams();
 
@@ -92,6 +103,9 @@ const CategoryDetails = () => {
       <Container>
         <SectionTitle>{capitalize(category)} Cards</SectionTitle>
         {CardRows}
+        <Footer>
+          <Link to="/">View all cards</Link>
+        </Footer>
       </Container>
     </>
   );

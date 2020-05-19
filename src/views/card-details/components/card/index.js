@@ -49,10 +49,12 @@ const CardNavDivider = styled.span`
 `;
 
 const CardNavBtn = styled.button`
-  color: ${({ active }) => (active ? "#5d5b6a" : "#588da8")};
+  color: ${({ active }) => (active ? "#5d5b6a" : "#15d7aa")};
   border: none;
   background: none;
   cursor: pointer;
+
+  font-weight: bold;
 
   ${space}
 `;
